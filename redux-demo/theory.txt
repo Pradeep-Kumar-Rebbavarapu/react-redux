@@ -1,0 +1,63 @@
+Redux:- is a predictable state container for javascript apps
+
+1)it is for javascript apps:-
+    it can be used with any framework like vue or even vanilla javascript
+
+2)it is a state container:-
+    redux stores the states of your application
+3)it is predictable:-
+
+
+
+3 core Concepts 
+Shop : Cake Shop : To Store Cakes
+Redux : Store : To Store States 
+
+Intention is to BUY_CAKE 
+
+action:Intention to BUY_CAKE : describes what happened
+
+Shopkeper : Reducer :  brings you the Cake
+
+Ties the store and actions together and returns output
+
+
+Store :- A Store That Holds The State Of Your application
+
+Action:- it describes the chamges in the state of the application
+
+Reducer:- which actually carries out the state changes depending on the action
+
+
+Three Principles of redux:-
+1)"the state of your whole application is stored in an object tree withing a single store"
+    maintain our application state in a single object which would be managed by the redux store
+    {
+        numberOfCakes:10
+    }
+
+2)"the only way to change the state is to emit an action,an object describing what happened"
+    {
+        type:BUY_CAKE
+    }
+
+3)"to specify how the state tree is trasformed by actions,you write pure reducers"
+    reducer - {previousState,action} =>newstate
+
+
+
+Actions:-they are the only way your app can interact with the store.they carry some information it might be secured or insecured.they must have a type property which defines the way they act.type basicly means giving name to the action so that the reducer can identify it.type is basicly string constants
+
+
+Store:-
+1)getState()
+2)dispatch(action)
+3)subscribe(listener)
+4)unsubscribe(listener)
+
+
+
+MIDDLEWARE:-
+    1)it is the suggested way to extend redux with custom functionality
+    2)Provides a third pary extension point between despatching an action and the moment it reaches the reducer
+    3)We can use middleware for loggin in,crash reporting and performing asynchronous tasks etc
